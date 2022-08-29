@@ -1,0 +1,33 @@
+.Expense-div {
+  display: flex;
+  height: 100px;
+  background-color: #220035;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 100px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(218, 72, 255, 0.488);
+  transition: transform 0.5s ease-in-out;
+}
+
+.Expense-div:hover {
+  transform: scale(1.05);
+}
+
+.Expense-div__Date {
+  color: rgb(140, 0, 248);
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.Expense-div__Expense-Reason {
+  font-size: larger;
+  color: bisque;
+}
+
+.Expense-div__Amount {
+  font-size: larger;
+  color: rgba(240, 248, 255, 0.574);
+}/*# sourceMappingURL=ExpenseItem.css.map */
