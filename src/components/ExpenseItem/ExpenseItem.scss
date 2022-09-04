@@ -1,29 +1,57 @@
-.Expense-div{
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+.Expense-div {
     display: flex;
-    height:100px;
-    background-color: #220035;
+    height: 8rem;
+    background-color: #151515;
     align-items: center;
     justify-content: space-between;
     margin: 10px 100px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(218, 72, 255, 0.488);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(26, 26, 26, 0.488);
     transition: transform 0.5s ease-in-out;
+    font-family: 'Dosis', sans-serif;
 }
-.Expense-div:hover{
-    transform: scale(1.05);
-}
-.Expense-div__Date{
+
+.Expense-div__Date {
     color: rgb(140, 0, 248);
     display: flex;
     flex-direction: column;
     font-size: larger;
 }
-.Expense-div__Expense-Reason{
+
+.Expense-div__Expense-Reason {
     font-size: larger;
-    color: bisque;
+    color: rgb(255, 255, 255);
 }
-.Expense-div__Amount{
+
+.Expense-div__Amount {
+    display: flex;
+    align-items: center;
+    background-color: #6c00ab;
+    padding: 15px;
+    border-radius: 7px;
     font-size: larger;
-    color: rgba(240, 248, 255, 0.574);
+    color: rgba(240, 248, 255, 0.562);
+    transition: color 0.2s ease-out;
+    position: relative;
+}
+
+.Expense-div__Amount span:first-of-type {
+    font-size: 25px;
+    position: absolute;
+    transform: translateX(-30px);
+}
+
+.Expense-div__Amount span:first-of-type .plis {
+    color: rgb(0, 255, 0);
+}
+
+.Expense-div__Amount span:first-of-type .minus {
+    color: rgb(255, 0, 0);
+}
+
+.Expense-div:hover .Expense-div__Amount {
+    color: rgba(240, 248, 255, 0.995);
 }

@@ -1,20 +1,22 @@
+import React, { useState } from "react";
 import "./ExpenseItem.css"
+import ExpenseDate from "./ExpenseDate";
 
-let date = new Date(2021, 2, 30);
-let expnseName = "anime"
-let amt = 297;
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
+    const [title, newTitle] = useState(props.title);
+    const clickHandler = () =>{
+        newTitle("updated");
+    }
     return (
         <div className="Expense-div">
-            <div className="Expense-div__Date">
-                <h1>{date.toISOString()}</h1>
-            </div>
+            <ExpenseDate date={props.date} />
             <div className="Expense-div__Expense-Reason">
-                <h1>{expnseName}</h1>
+                <h1>{title}</h1>
             </div>
             <div className="Expense-div__Amount">
-                {amt}
+                <span>$</span><span>{props.amount}</span>
             </div>
+            <button onClick={clickHandler}>Click</button>
         </div>
     );
 }
