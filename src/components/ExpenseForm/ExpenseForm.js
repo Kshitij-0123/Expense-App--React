@@ -66,7 +66,7 @@ const ExpenseForm = (props) => {
                     </div>
                     <input type='text' value={userInput['title']} className="form-input__reason" onChange={titleChangeHandler} />
                 </div>
-                <button type="submit" className="form__submit">ADD</button>
+                <button type="submit" className="form__submit third">ADD NEW EXPENSE</button>
             </form>
         </Card>
     );

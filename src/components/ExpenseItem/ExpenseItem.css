@@ -11,6 +11,10 @@
   box-shadow: 0 0 15px rgba(26, 26, 26, 0.488);
   transition: transform 0.5s ease-in-out;
   font-family: "Dosis", sans-serif;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
 }
 
 .Expense-div__Date {
@@ -53,4 +57,4 @@
 
 .Expense-div:hover .Expense-div__Amount {
   color: rgba(240, 248, 255, 0.995);
-}/*# sourceMappingURL=ExpenseItem.css.map */
+}
