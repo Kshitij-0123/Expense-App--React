@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+
+input {
+  all: unset;
+}
+
+.form-div {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+.form-div form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 520px;
+  height: 100%;
+}
+
+.form div {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: flex-start;
+  width: 520px;
+  /* height: 100%; */
+}
+
+.form-input__date,
+.form-input__reason,
+.form-input__amount {
+  padding: 10px 10px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  background-color: aliceblue;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.636);
+  font-family: "Combo", cursive;
+  margin: 10px 30px;
+  height: 20px;
+}
+.form-input__date {
+  width: 120px;
+  padding-top: 15px;
+}
+
+.form-input__reason {
+  width: 440px;
+}
+.form-input__amount {
+  width: 250px;
+}
+button {
+  all: unset;
+}
+.form-tag button {
+  padding: 10px 30px;
+  font-family: "Dosis", sans-serif;
+  background-color: aliceblue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

@@ -2,6 +2,7 @@ import "./CSS Reset.css"
 import "./App.css"
 import Card from "./components/UI/Card";
 import ExpenseItem from "./components/ExpenseItem/ExpenseItem";
+import ExpenseForm from "./components/ExpenseForm/ExpenseForm";
 function App() {
   const expenses = [
     {
@@ -25,24 +26,29 @@ function App() {
     },
   ];
 
+  const formAddNew = (expense) => {
+    console.log(expense);
+  }
+
   return (
     <Card className="Main-Card">
+      <ExpenseForm onFormSubmit={formAddNew}></ExpenseForm>
       <ExpenseItem
-      title={expenses[0].title}
-      amount={expenses[0].amount}
-      date={expenses[0].date}/>
+        title={expenses[0].title}
+        amount={expenses[0].amount}
+        date={expenses[0].date} />
       <ExpenseItem
-      title={expenses[1].title}
-      amount={expenses[1].amount}
-      date={expenses[1].date}/>
+        title={expenses[1].title}
+        amount={expenses[1].amount}
+        date={expenses[1].date} />
       <ExpenseItem
-      title={expenses[2].title}
-      amount={expenses[2].amount}
-      date={expenses[2].date}/>
+        title={expenses[2].title}
+        amount={expenses[2].amount}
+        date={expenses[2].date} />
       <ExpenseItem
-      title={expenses[3].title}
-      amount={expenses[3].amount}
-      date={expenses[3].date}/>
+        title={expenses[3].title}
+        amount={expenses[3].amount}
+        date={expenses[3].date} />
     </Card>
   );
 }
