@@ -1,0 +1,26 @@
+.filter-div {
+  display: flex;
+  height: 3rem;
+  background-color: #151515;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8.3px 100px 0;
+  padding: 20px;
+  border-radius: 0px;
+  font-family: "Dosis", sans-serif;
+}
+
+.filter-div label {
+  color: aliceblue;
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.filter-div select {
+  padding: 5px 10px;
+}
+
+.filter-div option {
+  font-size: larger;
+  padding: 5px 10px;
+}

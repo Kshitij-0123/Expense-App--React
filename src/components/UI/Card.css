@@ -1,5 +1,5 @@
-.Card{
-    height: 90%;
-    width: 90%;
-    background-color: rgb(48, 48, 48);
+.Card {
+  min-height: 100%;
+  width: 90%;
+  background-color: rgb(48, 48, 48);
 }
