@@ -3,18 +3,8 @@ import Card from "../UI/Card"
 import "./ExpenseForm.css"
 
 const ExpenseForm = (props) => {
-    // const [title, updateTitle] = useState('');
-    // const [amount, updateAmount] = useState('');
-    // const [date, updateDate] = useState('');
-
     const [userInput, setUserInput] = useState({ title: "", amount: "", date: "" })
-
     const titleChangeHandler = (event) => {
-        // updateTitle(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     title: event.target.value
-        // })
         setUserInput((userInput) => {
             return {
                 ...userInput,
@@ -23,7 +13,6 @@ const ExpenseForm = (props) => {
         })
     }
     const amountChangeHandler = (event) => {
-        // updateAmount(event.target.value);
         setUserInput((userInput) => {
             return {
                 ...userInput,
@@ -32,7 +21,6 @@ const ExpenseForm = (props) => {
         })
     }
     const dateChangeHandler = (event) => {
-        // updateDate(event.target.value);
         setUserInput((userInput) => {
             return {
                 ...userInput,
@@ -55,19 +43,31 @@ const ExpenseForm = (props) => {
             date: "",
         })
     };
+    const [formState, setFormState] = useState(false);
+    const changeFormState = () => {
+        setFormState(!formState);
+    }
+    const renderButton = (
+        <button type="" value={"show_expense_form"} className="form-show-button third" onClick={changeFormState} > ADD NEW EXPENSE</button>
+    )
+    const renderForm = (
+        <form className="form-tag" onSubmit={formSubmitHandler}>
+            <div className="form">
+                <div>
+                    <input type='date' value={userInput['date']} className="form-input__date" onChange={dateChangeHandler} />
+                    <input type='number' value={userInput['amount']} className="form-input__amount" onChange={amountChangeHandler} />
+                </div>
+                <input type='text' value={userInput['title']} className="form-input__reason" onChange={titleChangeHandler} />
+            </div>
+            <button type="submit" className="form__button third">SUBMIT</button>
+            <button type="reset" onClick={changeFormState} className="form__button third">CANCEL</button>
+        </form>)
 
     return (
         <Card className="form-div">
-            <form className="form-tag" onSubmit={formSubmitHandler}>
-                <div className="form">
-                    <div>
-                        <input type='date' value={userInput['date']} className="form-input__date" onChange={dateChangeHandler} />
-                        <input type='number' value={userInput['amount']} className="form-input__amount" onChange={amountChangeHandler} />
-                    </div>
-                    <input type='text' value={userInput['title']} className="form-input__reason" onChange={titleChangeHandler} />
-                </div>
-                <button type="submit" className="form__submit third">ADD NEW EXPENSE</button>
-            </form>
+            {
+                (formState === false) ? renderButton : renderForm
+            }
         </Card>
     );
 }

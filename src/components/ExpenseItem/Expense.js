@@ -19,9 +19,7 @@ const Expense = (props) => {
 
     const filteredExpenseList = props.expenseList.filter((expense) => {
         if (filteredYear === "All") { return true }
-        else {
-            return expense.date.getFullYear().toString() === filteredYear;
-        }
+        else { return expense.date.getFullYear().toString() === filteredYear; }
     })
 
     return (
@@ -30,15 +28,14 @@ const Expense = (props) => {
                 onFilter={filterHandle}
                 yearList={years}
                 listData={props.expenseList} />
-            {
-                filteredExpenseList.map((exp) => (
-                    <ExpenseItem
-                        key={exp.id}
-                        title={exp.title}
-                        amount={exp.amount}
-                        date={exp.date}
-                    />
-                ))}
+            {filteredExpenseList.map((exp) => (
+                <ExpenseItem
+                    key={exp.id}
+                    title={exp.title}
+                    amount={exp.amount}
+                    date={exp.date}
+                />
+            ))}
         </div>
     );
 }
