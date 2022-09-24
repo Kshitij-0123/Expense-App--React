@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+
 html {
   font-family: "Noto Sans JP", sans-serif;
 }
