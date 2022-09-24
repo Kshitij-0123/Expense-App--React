@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ExpenseFilter from "./ExpenseFilter";
 import ExpenseItem from "./ExpenseItem";
+import ExpenseChart from "../Chart/ExpenseChart"
 
 const Expense = (props) => {
     const [filteredYear, changeFilteredYear] = useState("All");
@@ -28,6 +29,13 @@ const Expense = (props) => {
                 onFilter={filterHandle}
                 yearList={years}
                 listData={props.expenseList} />
+
+            {filteredYear === "All" ?
+                <ExpenseChart expense={filteredExpenseList} ht={0} /> :
+                <ExpenseChart expense={filteredExpenseList} ht={170} />}
+
+
+
             {filteredExpenseList.map((exp) => (
                 <ExpenseItem
                     key={exp.id}

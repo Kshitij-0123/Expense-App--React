@@ -4,10 +4,6 @@ import "./ExpenseFilter.css"
 
 const ExpenseFilter = (props) => {
 
-    // const sortDate = (exp) => {
-    //     exp.sort((objA, objB) => Number(objA.date) - Number(objB.date));
-    // }
-
     const [years, setYears] = useState([]);
     props.yearList.forEach((c) => {
         if (!years.includes(c)) {

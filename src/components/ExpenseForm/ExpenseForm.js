@@ -59,15 +59,16 @@ const ExpenseForm = (props) => {
                 </div>
                 <input type='text' value={userInput['title']} className="form-input__reason" onChange={titleChangeHandler} />
             </div>
-            <button type="submit" className="form__button third">SUBMIT</button>
-            <button type="reset" onClick={changeFormState} className="form__button third">CANCEL</button>
-        </form>)
+            <div className="form__buttons">
+                <button type="reset" onClick={changeFormState} className="form__button third">CANCEL</button>
+                <button type="submit" className="form__button third">SUBMIT</button>
+            </div>
+        </form>
+    )
 
     return (
         <Card className="form-div">
-            {
-                (formState === false) ? renderButton : renderForm
-            }
+            {(formState === false) ? renderButton : renderForm}
         </Card>
     );
 }

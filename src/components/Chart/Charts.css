@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+.expense-chart {
+  /*height: 170px;
+  */
+  background-color: rgb(61, 0, 147);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  margin: 0px 100px;
+  overflow: hidden;
+  transition: 0.4s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -ms-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+}
+
+.expense-bar {
+  height: 100px;
+  width: 10px;
+  border: 2px solid rgb(189, 165, 255);
+  border-radius: 50px;
+  align-items: center;
+  position: relative;
+}
+
+.expense-bar-inner {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.expense-bar-inner__filled {
+  /* margin: 0 0; */
+  width: 100%;
+  background-color: rgb(255, 0, 123);
+  border-radius: 12px;
+  /* border: 2px solid rgb(255, 0, 123); */
+  transition: all 0.3s ease-out;
+}
+
+.expense-bar__label {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  transform: translateX(-45%);
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin: 5px 0 0 0;
+  -webkit-transform: translateX(-45%);
+  -moz-transform: translateX(-45%);
+  -ms-transform: translateX(-45%);
+  -o-transform: translateX(-45%);
+}

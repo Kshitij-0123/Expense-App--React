@@ -5,7 +5,9 @@
 input {
   all: unset;
 }
-
+.form-tag {
+  position: relative;
+}
 .form-div {
   display: flex;
   width: 100%;
@@ -87,8 +89,8 @@ button {
 .third {
   border-color: #6e34db;
   color: #fff;
-  box-shadow: 0 0 10px 0 #6e34db inset, 0 0 10px 4px #6e34db;
-  color: white;
+  box-shadow: 0 0 40px 40px #5327a4 inset, 0 0 0 0 #5327a4;
+  color: black;
   transition: box-shadow 0.4s cubic-bezier(0.7, 0.48, 0.01, 1.11),
     color 0.4s cubic-bezier(0.7, 0.48, 0.01, 1.11);
   -webkit-transition: box-shadow 0.4s cubic-bezier(0.7, 0.48, 0.01, 1.11),
@@ -101,10 +103,14 @@ button {
     color 0.4s cubic-bezier(0.7, 0.48, 0.01, 1.11);
 }
 .third:hover {
-  box-shadow: 0 0 40px 40px #5327a4 inset, 0 0 0 0 #5327a4;
-  color: black;
+  box-shadow: 0 0 10px 0 #6e34db inset, 0 0 10px 4px #6e34db;
+  color: white;
 }
 
-.form-show-button {
-  padding: 10px 20px;
+.form__buttons {
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
